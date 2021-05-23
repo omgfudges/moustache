@@ -1,17 +1,15 @@
-import Header from "./components/Header";
 import Main from "./components/Main";
 import Pic from "./components/Pic";
-import Basket from "./components/Basket";
-import data from "./data";
+import Cart from "./components/Cart";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import data from "./data";
 
 function App() {
-  const product = {
-    id: "1",
-    name: "T-Shirt",
-    price: 75,
-    image: "https://i.imgur.com/rQEtas1.jpg",
-  };
+  const { product } = data;
+  const shoppingCart = <FontAwesomeIcon icon={faCartPlus} />;
+  const [cart, setCart] = useState([]);
 
   function addToCart(size) {
     let cartItem = {
@@ -19,20 +17,21 @@ function App() {
       size: size,
     };
     setCart([...cart, cartItem]);
-    console.log(cart.length);
-    console.log(JSON.stringify(cart));
   }
-  const [cart, setCart] = useState([]);
 
   return (
     <div className="App">
       <header className="row block center">
         <div></div>
         <h3>
-          My Cart<span> ({cart.length})</span>
+          <Cart cartItems={cart}></Cart>
+          My Cart{" "}
+          <span>
+            {shoppingCart}({cart.length})
+          </span>
         </h3>
       </header>
-      <div className="row">
+      <div className="row flex-grid">
         <Pic></Pic>
         <Main onAdd={addToCart}></Main>
       </div>

@@ -14,7 +14,7 @@ function Size(props) {
     border: "2px solid #cccccc",
   };
 
-  console.log(currentSize);
+  // console.log(currentSize);
 
   return (
     <div>
