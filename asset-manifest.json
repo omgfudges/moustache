@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/moustache/static/css/main.88f727e8.chunk.css",
+    "main.js": "/moustache/static/js/main.8a0aabe6.chunk.js",
+    "main.js.map": "/moustache/static/js/main.8a0aabe6.chunk.js.map",
+    "runtime-main.js": "/moustache/static/js/runtime-main.20c3bfc4.js",
+    "runtime-main.js.map": "/moustache/static/js/runtime-main.20c3bfc4.js.map",
+    "static/js/2.0c273ba9.chunk.js": "/moustache/static/js/2.0c273ba9.chunk.js",
+    "static/js/2.0c273ba9.chunk.js.map": "/moustache/static/js/2.0c273ba9.chunk.js.map",
+    "static/js/3.e1d86910.chunk.js": "/moustache/static/js/3.e1d86910.chunk.js",
+    "static/js/3.e1d86910.chunk.js.map": "/moustache/static/js/3.e1d86910.chunk.js.map",
+    "index.html": "/moustache/index.html",
+    "static/css/main.88f727e8.chunk.css.map": "/moustache/static/css/main.88f727e8.chunk.css.map",
+    "static/js/2.0c273ba9.chunk.js.LICENSE.txt": "/moustache/static/js/2.0c273ba9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20c3bfc4.js",
+    "static/js/2.0c273ba9.chunk.js",
+    "static/css/main.88f727e8.chunk.css",
+    "static/js/main.8a0aabe6.chunk.js"
+  ]
+}
