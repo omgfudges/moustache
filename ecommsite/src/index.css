@@ -28,6 +28,11 @@ a {
   display: flex;
   max-height: 0.8rem;
 }
+.row3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
 .row.center {
   align-items: center;
 }
@@ -151,6 +156,7 @@ p {
   border: 2px solid #cccccc;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
 }
 
 .cartimg {
@@ -161,6 +167,11 @@ p {
 }
 .cartTxt {
   font-size: small;
+  font-family: "Helvetica";
+  color: #222222;
+}
+.cartBtn {
+  border: hidden;
   font-family: "Helvetica";
   color: #222222;
 }

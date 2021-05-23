@@ -1,10 +1,13 @@
 import React, { useState, useRef } from "react";
 import { Overlay } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart(props) {
   const { cartItems, onAdd } = props;
   const [show, setShow] = useState(false);
   const target = useRef(null);
+  const shoppingCart = <FontAwesomeIcon icon={faCartPlus} />;
 
   const sizeSelected = JSON.stringify(cartItems);
   let countSmall = "";
@@ -34,10 +37,10 @@ export default function Cart(props) {
 
   return (
     <div>
-      <button ref={target} onClick={() => setShow(!show)}>
-        My Cart
+      <button className="cartBtn" ref={target} onClick={() => setShow(!show)}>
+        My Cart <span>{shoppingCart}</span> ({cartItems.length})
       </button>
-      <Overlay target={target.current} show={show} placement="bottom">
+      <Overlay target={target.current} show={show} placement="bottom-end">
         {({ placements, arrowProps, show: _show, popper, ...props }) => (
           <div
             className="cart"
@@ -47,7 +50,7 @@ export default function Cart(props) {
             }}
           >
             {countSmall != "" && (
-              <div className="row">
+              <div className="row3">
                 <div className="col-1">
                   <img
                     className="cartimg"
@@ -63,7 +66,7 @@ export default function Cart(props) {
               </div>
             )}
             {countMedium != "" && (
-              <div className="row">
+              <div className="row3">
                 <div className="col-1">
                   <img
                     className="cartimg"
@@ -79,7 +82,7 @@ export default function Cart(props) {
               </div>
             )}
             {countLarge != "" && (
-              <div className="row">
+              <div className="row3">
                 <div className="col-1">
                   <img
                     className="cartimg"
